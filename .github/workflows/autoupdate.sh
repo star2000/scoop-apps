@@ -28,7 +28,7 @@ gen_bucket_config() {
     not_recommand_buckets=$(cat bucket-not-recommand.txt)
     for bucket in ${not_recommand_buckets[@]}; do
         echo "remove bucket:$bucket"
-        sed -i "/$bucket/d" bucket.config
+        grep -n "$bucket" bucket.config | awk -F':' '{print $1}' | xargs -n 1 -I num sed -i 'numd' bucket.config
     done
 }
 
