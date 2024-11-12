@@ -23,7 +23,7 @@ gen_bucket_config() {
         done
     fi
     # bucket remove duplicate
-    cat bucket.config | sort | uniq >bucket.config
+    awk ' !x[$0]++' bucket.config
     # remove bucket-not-recommand.txt
     not_recommand_buckets=$(cat bucket-not-recommand.txt)
     for bucket in ${not_recommand_buckets[@]}; do
