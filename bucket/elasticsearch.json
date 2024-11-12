@@ -1,0 +1,47 @@
+{
+    "version": "8.15.4",
+    "description": "Distributed, RESTful Search Engine",
+    "homepage": "https://www.elastic.co/products/elasticsearch",
+    "license": {
+        "identifier": "Freeware|Apache-2.0",
+        "url": "https://github.com/elastic/elasticsearch/blob/master/LICENSE.txt"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.15.4-windows-x86_64.zip",
+            "hash": "sha512:547e5998c47cbb4bf9673aa87e6b410a100558549fff0afb811df01a07b2a207066b7fbde694a7b65f140ada7c38f1cbc6c6f19d7e83b17da3f7f15bcff366c1"
+        }
+    },
+    "extract_dir": "elasticsearch-8.15.4",
+    "pre_install": [
+        "    # Overwrite SCRIPT because elasticsearch-env.bat doesn't care if SCRIPT or ES_HOME are already set ...",
+        "$file = \"$dir\\bin\\elasticsearch-env.bat\"",
+        "$cont = (Get-Content \"$file\") -replace 'set SCRIPT=%0', \"set SCRIPT=$file\"",
+        "Set-Content \"$file\" ($cont -join \"`r`n\") -Encoding ASCII",
+        "    # use persistent data/logs directory",
+        "$file = \"$dir\\config\\elasticsearch.yml\"",
+        "$cont = (Get-Content \"$file\") -replace '#path.data:.*$', \"path.data: $persist_dir\\data\"",
+        "$cont = $cont -replace '#path.logs:.*$', \"path.logs: $persist_dir\\logs\"",
+        "Set-Content \"$file\" ($cont -join \"`r`n\") -Encoding ASCII"
+    ],
+    "env_add_path": "bin",
+    "persist": [
+        "config",
+        "plugins"
+    ],
+    "checkver": {
+        "url": "https://www.elastic.co/downloads/elasticsearch",
+        "regex": "elasticsearch-([\\d.]+)-windows"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-$version-windows-x86_64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha512"
+        },
+        "extract_dir": "elasticsearch-$version"
+    }
+}
