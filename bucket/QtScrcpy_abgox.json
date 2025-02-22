@@ -1,5 +1,5 @@
 {
-    "version": "3.1.1",
+    "version": "3.1.2",
     "description": "通过TCP/IP或USB显示和控制Android设备。Display and control Android device via TCP/IP or USB.",
     "homepage": "https://github.com/barry-ran/QtScrcpy",
     "license": {
@@ -8,14 +8,14 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/barry-ran/QtScrcpy/releases/download/v3.1.1/QtScrcpy-win-x64-v3.1.1.zip",
-            "hash": "eea22a162b0d3837b766f95e325f132ac473a1c4d26bd460f042f2390e263c3f",
-            "extract_dir": "QtScrcpy-win-x64-v3.1.1"
+            "url": "https://github.com/barry-ran/QtScrcpy/releases/download/v3.1.2/QtScrcpy-win-x64-v3.1.2.zip",
+            "hash": "3405c5917e53702e8b2714fd2ed8845c617a52cca778f108e0dde64c007818d5",
+            "extract_dir": "QtScrcpy-win-x64-v3.1.2"
         },
         "32bit": {
-            "url": "https://github.com/barry-ran/QtScrcpy/releases/download/v3.1.1/QtScrcpy-win-x86-v3.1.1.zip",
-            "hash": "b95fd38cde5772d2d05c0d0740171d2879ea2fd2fe4282960fd35ecaed384b64",
-            "extract_dir": "QtScrcpy-win-x86-v3.1.1"
+            "url": "https://github.com/barry-ran/QtScrcpy/releases/download/v3.1.2/QtScrcpy-win-x86-v3.1.2.zip",
+            "hash": "104c4afa174fa1c5a999dabac7c8f6a2ee240625cb5f832f681c839a3630fa7c",
+            "extract_dir": "QtScrcpy-win-x86-v3.1.2"
         }
     },
     "shortcuts": [
