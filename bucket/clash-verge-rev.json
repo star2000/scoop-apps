@@ -1,16 +1,19 @@
 {
     "version": "2.1.1",
-    "description": "Continuation of Clash Verge - A Clash Meta GUI based on Tauri.",
+    "description": "Clash.meta GUI: A sleek Tauri-based interface revolutionizing ease of use across Windows, macOS, and Linux, merging beauty with simplicity for an unparalleled user experience",
     "homepage": "https://github.com/clash-verge-rev/clash-verge-rev",
-    "license": "GPL-3.0-only",
+    "license": {
+        "identifier": "GPL-3.0 license",
+        "url": "https://github.com/clash-verge-rev/clash-verge-rev/blob/main/LICENSE"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.1/Clash.Verge_2.1.1_x64-setup.exe#/dl.7z",
-            "hash": "db38664e6ab7ac2880b21b252e761b8ba565c7490eb31dd9ec44993829abecc4"
+            "hash": "f7631ccc564c602eb7122d0bc41bb722056403f2e4d4c6f04ed3106122d501ff"
         },
         "arm64": {
             "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.1/Clash.Verge_2.1.1_arm64-setup.exe#/dl.7z",
-            "hash": "c0f0d9ec1902814f8dc5c0be1bfdcec79d932753f8a8d4e11ad83995d11b5caa"
+            "hash": "a6ceb1375b513755cf6123992eb8a7e37023d5e224924ae20e9ac41ddec63644"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst*\" -Force -Recurse",
@@ -39,11 +42,14 @@
     },
     "shortcuts": [
         [
-            "clash-verge.exe",
+            "Clash Verge.exe",
             "Clash Verge"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest",
+        "regex": "(?sm)browser_download_url.*?releases/download/v([\\d.]+)/Clash.Verge_([\\d.]+)_x64-setup\\.exe"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
