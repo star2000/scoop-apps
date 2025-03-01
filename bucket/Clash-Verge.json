@@ -1,10 +1,10 @@
 {
     "homepage": "https://github.com/clash-verge-rev/clash-verge-rev",
     "description": "A Clash GUI based on tauri. ",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "license": "GPL-3.0",
-    "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.1/Clash.Verge_2.1.1_x64-setup.exe#/dl.7z",
-    "hash": "61da4456ccb35fcab0424fc06b7ed70ca3fec0055bb84f1ead1e75e15379c7a9",
+    "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.2/Clash.Verge_2.1.2_x64-setup.exe#/dl.7z",
+    "hash": "4420902f80df7c5468b3e2f3111e707cd2ced1428a032df97735cd070b28bba5",
     "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$TEMP\", \"$dir\\uninst*\" -Force -Recurse",
     "bin": "clash-verge.exe",
     "shortcuts": [
