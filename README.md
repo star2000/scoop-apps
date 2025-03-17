@@ -113,15 +113,15 @@ scoop bucket add apps https://github.com/star2000/scoop-apps
 - cc713/ownscoop
 - starise/Scoop-Confetti
 - Small-Ku/turbo-bucket
-- Weidows-projects/scoop-3rd
 - Darkatse/Scoop-Darkatse
+- Weidows-projects/scoop-3rd
 - babo4d/scoop-xrtools
 - mo-san/scoop-bucket
 - rivy/scoop-bucket
 - HUMORCE/nuke
+- WinApps-share/WinApps-bucket
 - beer-psi/scoop-bucket
 - AkariiinMKII/Scoop4kariiin
-- WinApps-share/WinApps-bucket
 - littleli/Scoop-littleli
 - MCOfficer/scoop-bucket
 - ShuguangSun/sgs-scoop-bucket
