@@ -76,8 +76,8 @@ scoop bucket add apps https://github.com/star2000/scoop-apps
 - cderv/r-bucket
 - hermanjustnu/scoop-emulators
 - couleur-tweak-tips/utils
-- dodorz/scoop
 - whoopscs/scoop-security
+- dodorz/scoop
 - niheaven/scoop-sysinternals
 - borger/scoop-emulators
 - ViCrack/scoop-bucket
@@ -99,8 +99,8 @@ scoop bucket add apps https://github.com/star2000/scoop-apps
 - cmontage/scoopbucket-third
 - xrgzs/sdoog
 - abgox/abgo_bucket
-- ygguorun/scoop-bucket
 - noql-net/scoop
+- ygguorun/scoop-bucket
 - brian6932/dank-scoop
 - kengwang/scoop-ctftools-bucket
 - aliesbelik/poldi
@@ -113,10 +113,10 @@ scoop bucket add apps https://github.com/star2000/scoop-apps
 - cc713/ownscoop
 - starise/Scoop-Confetti
 - Small-Ku/turbo-bucket
-- rivy/scoop-bucket
+- Darkatse/Scoop-Darkatse
 - mo-san/scoop-bucket
 - Weidows-projects/scoop-3rd
-- Darkatse/Scoop-Darkatse
+- rivy/scoop-bucket
 - babo4d/scoop-xrtools
 - beer-psi/scoop-bucket
 - HUMORCE/nuke
@@ -124,10 +124,10 @@ scoop bucket add apps https://github.com/star2000/scoop-apps
 - littleli/Scoop-littleli
 - AkariiinMKII/Scoop4kariiin
 - MCOfficer/scoop-bucket
-- natecohen/scoop-av
 - ShuguangSun/sgs-scoop-bucket
-- The-Simples/scoop-minecraft
 - FlawlessCasual17/MyScoop
+- natecohen/scoop-av
+- The-Simples/scoop-minecraft
 - Deide/deide-bucket
 - KnotUntied/scoop-fonts
 - yuanying1199/scoopbucket
