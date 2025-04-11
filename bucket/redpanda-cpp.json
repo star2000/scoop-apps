@@ -1,30 +1,45 @@
 {
-    "version": "2.26",
-    "description": "A light-weight C/C++ IDE based on Qt",
-    "homepage": "https://royqh.net/redpandacpp/",
+    "version": "3.2",
+    "description": "跨平台、轻量易用的开源C/C++集成开发环境",
+    "homepage": "http://royqh.net/redpandacpp/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/projects/redpanda-cpp/files/2.26/RedPanda.C%2B%2B.2.26.win64.No.Compiler.Portable.7z",
-            "hash": "sha1:19ab75d38f5a9a8a48a818ca35d0f457edcb6d7c"
+            "url": "https://api.xrgzs.top/lanzou/?url=https://www.lanzoui.com/ijcYb2gg3u6j&type=down#/dl.7z",
+            "hash": "7b78c2503364cb575c94e031bab50613fcbda1f30bc1f154dd0d4a28ef8b7eee"
+        },
+        "32bit": {
+            "url": "https://api.xrgzs.top/lanzou/?url=https://www.lanzoui.com/i3QIj2gg3pve&type=down#/dl.7z",
+            "hash": "69df268883fe7d53351f565d61808f85fa5d97aa781250c6ad2a39bc08885218"
         }
     },
-    "extract_dir": "RedPanda-CPP",
     "shortcuts": [
         [
             "RedPandaIDE.exe",
-            "Red Panda C++"
+            "小熊猫C++"
         ]
     ],
     "persist": "config",
+    "installer": {
+        "script": "Remove-Item \"$dir\\`$*\" -Recurse -Force"
+    },
     "checkver": {
-        "url": "https://sourceforge.net/p/redpanda-cpp/activity/feed",
-        "regex": "(\\d[\\d.]+).win64.No.Compiler"
+        "script": [
+            ". \"$pwd\\bin\\utils.ps1\"",
+            "$l = Get-LanzouList \"https://wwe.lanzoui.com/b01os0mwd\" f0tp",
+            "$fa = $l | Where-Object { $_.name_all -like \"RedPanda.C++.*.win64.MinGW64*Setup.exe\" } | Select-Object -First 1",
+            "$fb = $l | Where-Object { $_.name_all -like \"RedPanda.C++.*.win32.MinGW32*Setup.exe\" } | Select-Object -First 1",
+            "$fa.name_all + '=====' + $fa.id + '=====' + $fb.id"
+        ],
+        "regex": "RedPanda.C\\+\\+.(.*).win64.MinGW64.*Setup.exe=====(?<sharekeya>.*)=====(?<sharekeyb>.*)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.sourceforge.net/projects/redpanda-cpp/files/$majorVersion.$minorVersion/RedPanda.C%2B%2B.$version.win64.No.Compiler.Portable.7z"
+                "url": "https://api.xrgzs.top/lanzou/?url=https://www.lanzoui.com/$matchSharekeya&type=down#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://api.xrgzs.top/lanzou/?url=https://www.lanzoui.com/$matchSharekeyb&type=down#/dl.7z"
             }
         }
     }
