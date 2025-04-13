@@ -1,57 +1,23 @@
 {
-    "version": "3.9.12.51",
-    "description": "微信 Windows 版",
+    "version": "4.0.3",
+    "description": "Connecting a billion people with calls, chats, and more",
     "homepage": "https://pc.weixin.qq.com/",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://www.wechat.com/en/service_terms.html"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
-            "hash": "86593666b6a81a742435879db25c2575a9f8967b877968c91aaa8a68b5f21af4"
-        },
-        "32bit": {
-            "url": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup_x86.exe#/dl.7z",
-            "hash": "5c28862066f28fe6723d7b3c9781708b7fafe61134b6322dd9f8e647c7e59992"
-        }
+    "license": "BSD-3-Clause",
+    "url": "https://dldir1v6.qq.com/weixin/Universal/Windows/WeChatWin.exe#/dl.7z",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\install.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+            "Remove-Item \"$dir\\install.7z\" -Force -Recurse"
+        ]
     },
     "shortcuts": [
         [
-            "WeChat.exe",
+            "Weixin.exe",
             "微信"
         ]
     ],
-    "post_install": [
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "New-PersistDirectory \"$env:APPDATA\\Tencent\\WeChat\" \"$persist_dir\\AppData\" -Migrate",
-        "New-PersistDirectory \"$([Environment]::GetFolderPath('Personal'))\\WeChat Files\" \"$persist_dir\\WeChat Files\" -Migrate",
-        "New-Item -Path \"HKCU:\\Software\\Tencent\\WeChat\" -Name \"InstallPath\" -Value \"$dir\" -Force -ErrorAction SilentlyContinue | Out-Null"
-    ],
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App",
-        "Remove-Junction \"$env:APPDATA\\Tencent\\WeChat\"",
-        "Remove-Junction \"$([Environment]::GetFolderPath('Personal'))\\WeChat Files\"",
-        "Remove-Item -Path \"HKCU:\\Software\\Tencent\\WeChat\" -Recurse -Force -ErrorAction SilentlyContinue | Out-Null"
-    ],
-    "checkver": {
-        "script": [
-            "Import-Module \"$pwd\\bin\\WinGet.psm1\"",
-            "$Manifest = Get-WinGetInfo -Id 'Tencent.WeChat'",
-            "$Manifest.latest_version"
-        ],
-        "regex": "(.*)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup_x86.exe#/dl.7z"
-            }
-        }
+    "ext": {
+        "url": "https://pc.qq.com/detail/8/detail_11488.html"
     }
 }
