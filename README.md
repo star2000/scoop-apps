@@ -108,9 +108,9 @@ scoop bucket add apps https://github.com/star2000/scoop-apps
 - iquiw/scoop-bucket
 - SayCV/scoop-cvp
 - AStupidBear/scoop-bear
+- seumsc/scoop-seu
 - starise/Scoop-Confetti
 - TianXiaTech/scoop-txt
-- seumsc/scoop-seu
 - jfut/scoop-jfut
 - aoisummer/scoop-bucket
 - Small-Ku/turbo-bucket
