@@ -108,13 +108,13 @@ scoop bucket add apps https://github.com/star2000/scoop-apps
 - batkiz/backit
 - SayCV/scoop-cvp
 - AStupidBear/scoop-bear
-- seumsc/scoop-seu
-- jfut/scoop-jfut
 - starise/Scoop-Confetti
+- seumsc/scoop-seu
 - aoisummer/scoop-bucket
+- jfut/scoop-jfut
 - TianXiaTech/scoop-txt
-- Small-Ku/turbo-bucket
 - cc713/ownscoop
+- Small-Ku/turbo-bucket
 - Darkatse/Scoop-Darkatse
 - HUMORCE/nuke
 - babo4d/scoop-xrtools
