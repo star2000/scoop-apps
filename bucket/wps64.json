@@ -10,7 +10,7 @@
     "architecture": {
         "64bit": {
             "url": "https://official-package.wpscdn.cn/wps/download/WPS_Setup_X64_21170.exe",
-            "hash": "833dbed2deefde0e9f92a6a2471f86d270196b962fbd68f908090bcaeada0ebb"
+            "hash": "e17f8ccf8ba11f1bb1fca12ae2fcd4e570577a55402a53325401809006de46ff"
         }
     },
     "shortcuts": [
