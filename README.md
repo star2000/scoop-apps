@@ -82,8 +82,8 @@ scoop bucket add apps https://github.com/star2000/scoop-apps
 - ViCrack/scoop-bucket
 - borger/scoop-emulators
 - akirco/aki-apps
-- kiennq/scoop-misc
 - Qv2ray/mochi
+- kiennq/scoop-misc
 - wangzq/scoop-bucket
 - TheRandomLabs/Scoop-Bucket
 - zhoujin7/tomato
@@ -96,8 +96,8 @@ scoop bucket add apps https://github.com/star2000/scoop-apps
 - naderi/scoop-bucket
 - jonz94/scoop-sarasa-nerd-fonts
 - amorphobia/siku
-- hu3rror/scoop-muggle
 - NyaMisty/scoop_bucket_misty
+- hu3rror/scoop-muggle
 - abgox/abgo_bucket
 - noql-net/scoop
 - aliesbelik/poldi
@@ -105,15 +105,15 @@ scoop bucket add apps https://github.com/star2000/scoop-apps
 - brian6932/dank-scoop
 - kengwang/scoop-ctftools-bucket
 - TianXiaTech/scoop-txt
-- Darkatse/Scoop-Darkatse
 - iquiw/scoop-bucket
+- Darkatse/Scoop-Darkatse
 - batkiz/backit
 - SayCV/scoop-cvp
 - AStupidBear/scoop-bear
 - seumsc/scoop-seu
+- jfut/scoop-jfut
 - starise/Scoop-Confetti
 - aoisummer/scoop-bucket
-- jfut/scoop-jfut
 - Small-Ku/turbo-bucket
 - cc713/ownscoop
 - starise/Scoop-Gaming
