@@ -1,24 +1,21 @@
 {
-    "version": "1.4.1",
-    "description": "A desktop client that supports for multiple LLM providers.",
-    "homepage": "https://cherry-ai.com",
-    "license": "Apache-2.0",
+    "version": "1.4.2",
+    "description": "🍒 Cherry Studio is a desktop client that supports for multiple LLM providers.",
+    "homepage": "https://cherry-ai.com/",
+    "license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/CherryHQ/cherry-studio/blob/main/LICENSE"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.1/Cherry-Studio-1.4.1-x64-setup.exe#/dl.7z",
-            "hash": "sha512:054d60b5073f7553b86542262320c6bfbcbaf86b13a62dbc425b6da08ae5f67731e756b6ca973de13e30637931dc0ac3144118e0aa5ea04a48fe35d25f838e97",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\", \"$dir\\Unintall*\" -Recurse"
-            ]
+            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.2/Cherry-Studio-1.4.2-x64-setup.exe#/dl.7z",
+            "hash": "sha512:a1bfa588bb1e631555890138ab5c17ffae2530b47c0367e3f5f6213e07cc1346ce18d206fc7783fa99cf04bf772ed32982ed149591e7fdfc7bc43a156f8528e1",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
         },
         "arm64": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.1/Cherry-Studio-1.4.1-arm64-setup.exe#/dl.7z",
-            "hash": "a0dac2d635a40ce9abd9e4382d7c26c21156af242402353a37ff40c98a5dd792",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\", \"$dir\\Unintall*\" -Recurse"
-            ]
+            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.4.2/Cherry-Studio-1.4.2-arm64-setup.exe#/dl.7z",
+            "hash": "496a765e13521834b1bc5afa40ff8bf645c4df77ee9af39a17965a1ca0226edf",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\""
         }
     },
     "shortcuts": [
@@ -27,19 +24,19 @@
             "Cherry Studio"
         ]
     ],
-    "post_install": [
-        "if (Test-Path \"$persist_dir\\data\\*\") {",
-        "    New-Item \"$Env:AppData\\CherryStudio\" -ItemType Directory -Force | Out-Null",
-        "    Copy-Item \"$persist_dir\\data\\*\" \"$Env:AppData\\CherryStudio\" -Recurse",
-        "}"
-    ],
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\`$*\" -Force -Recurse",
+            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+            "New-PersistDirectory \"$env:APPDATA\\CherryStudio\" \"$persist_dir\\AppData\" -Migrate"
+        ]
+    },
     "pre_uninstall": [
-        "if (Test-Path \"$Env:AppData\\CherryStudio\\*\") {",
-        "    Remove-Item \"$persist_dir\\data\" -Recurse -Force",
-        "    Move-Item \"$Env:AppData\\CherryStudio\" \"$persist_dir\\data\" -Force",
-        "}"
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Stop-App",
+        "Remove-Junction \"$env:APPDATA\\CherryStudio\""
     ],
-    "persist": "data",
     "checkver": {
         "github": "https://github.com/CherryHQ/cherry-studio"
     },
@@ -48,12 +45,16 @@
             "64bit": {
                 "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-setup.exe#/dl.7z",
                 "hash": {
+                    "mode": "extract",
                     "url": "$baseurl/latest.yml",
-                    "regex": "sha512: $base64"
+                    "regex": "sha512:\\s+$base64"
                 }
             },
             "arm64": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-setup.exe#/dl.7z"
+                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-setup.exe#/dl.7z",
+                "hash": {
+                    "mode": "download"
+                }
             }
         }
     }
