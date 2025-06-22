@@ -143,7 +143,7 @@ merge_buckets(){
         echo "正在处理仓库: $bucket 仓库名:$bucket_dir 仓库github账号:$owner 时间: $(date '+%Y-%m-%d %H:%M:%S')"
         files=$(find ${cache_dir}/${bucket_dir} -type f -name *.json ! -name ".*" -not -path "${cache_dir}/$bucket_dir/.vscode/*" )
         files_array=(${files})
-        if [ ${#files_array[*]} -gt 2000 -a $owner != "ScoopInstaller" ]
+        if [ ${#files_array[*]} -gt 5000 -a $owner != "ScoopInstaller" ]
         then
             echo "仓库描述文件过多，忽略: $bucket 仓库名:$bucket_dir 仓库github账号:$owner"
             continue
