@@ -4997,7 +4997,7 @@ dataspell-rc.json,ScoopInstaller/Versions
 dartium-content-shell-dev.json,ScoopInstaller/Versions
 mingw-winlibs-ucrt.json,ScoopInstaller/Versions
 edgedriver-legacy.json,ScoopInstaller/Versions
-swift-nightly_ScoopInstaller.json,ScoopInstaller/Versions
+swift-nightly.json,ScoopInstaller/Versions
 nodejs11.json,ScoopInstaller/Versions
 elasticsearch1.json,ScoopInstaller/Versions
 gradle6.json,ScoopInstaller/Versions
@@ -8313,7 +8313,7 @@ redream-dev_borger.json,borger/scoop-emulators
 flycast_borger.json,borger/scoop-emulators
 retroarch-nightly_borger.json,borger/scoop-emulators
 ryujinx_borger.json,borger/scoop-emulators
-ppsspp-dev_borger.json,borger/scoop-emulators
+ppsspp-dev.json,borger/scoop-emulators
 steam-rom-manager_borger.json,borger/scoop-emulators
 fceux.json,borger/scoop-emulators
 pcsx2-dev_borger.json,borger/scoop-emulators
@@ -11528,7 +11528,7 @@ steamcommunity-302.json,Darkatse/Scoop-Darkatse
 vesta_Darkatse.json,Darkatse/Scoop-Darkatse
 HeroicGamesLauncher.json,Darkatse/Scoop-Darkatse
 ZenTimings.json,Darkatse/Scoop-Darkatse
-DLSS-Swapper_Darkatse.json,Darkatse/Scoop-Darkatse
+DLSS-Swapper.json,Darkatse/Scoop-Darkatse
 Movie_Data_Capture_GUI.json,Darkatse/Scoop-Darkatse
 geekdesk.json,TianXiaTech/scoop-txt
 360wallpaper.json,TianXiaTech/scoop-txt
