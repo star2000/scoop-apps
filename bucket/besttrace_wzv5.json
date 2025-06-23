@@ -1,0 +1,14 @@
+{
+    "version": "3.9.4-1",
+    "homepage": "https://www.ipip.net/",
+    "license": "Freeware",
+    "url": "https://cdn.ipip.net/17mon/besttrace.exe",
+    "hash": "53d3632ff587f7dacea563031cf40d097764b8392d339b7a2e158ce375270089",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "17monipdb.exe",
+            "BestTrace"
+        ]
+    ]
+}

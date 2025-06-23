@@ -1,0 +1,40 @@
+{
+    "version": "1803",
+    "description": "A free implementation of the Remote Desktop Protocol (RDP).",
+    "homepage": "https://www.freerdp.com/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://ci.freerdp.com/job/freerdp-nightly-windows/1803/arch=win64,label=vs2017/artifact/*zip*/archive.zip",
+            "hash": "8c03de909c6ee2758c89fedac9cbae50ff3d86397c3bdd9ebc3c239d414c211f"
+        },
+        "32bit": {
+            "url": "https://ci.freerdp.com/job/freerdp-nightly-windows/1803/arch=win32,label=vs2017/artifact/*zip*/archive.zip",
+            "hash": "bfd54743d4fc84e89eeca2b0f851a3dc18304ed2487f6c4b0f36e4d82f662223"
+        }
+    },
+    "extract_dir": "archive\\install\\bin",
+    "bin": [
+        "freerdp-proxy.exe",
+        "sdl2-freerdp.exe",
+        "sdl3-freerdp.exe",
+        "sfreerdp-server.exe",
+        "wfreerdp.exe",
+        "winpr-hash.exe",
+        "winpr-makecert.exe"
+    ],
+    "checkver": {
+        "url": "https://ci.freerdp.com/job/freerdp-nightly-windows/api/json",
+        "jsonpath": "$.lastSuccessfulBuild.number"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ci.freerdp.com/job/freerdp-nightly-windows/$version/arch=win64,label=vs2017/artifact/*zip*/archive.zip"
+            },
+            "32bit": {
+                "url": "https://ci.freerdp.com/job/freerdp-nightly-windows/$version/arch=win32,label=vs2017/artifact/*zip*/archive.zip"
+            }
+        }
+    }
+}

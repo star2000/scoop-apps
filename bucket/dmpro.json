@@ -1,0 +1,22 @@
+{
+    "version": "6.7.3.5",
+    "description": "A fully-featured and reliable e-mail client.",
+    "homepage": "https://cy-email.com/",
+    "license": "Shareware",
+    "url": "https://download.cy-email.cn/dmpro_setup6.7.3.5.exe",
+    "hash": "8b531f889b83b942b82998129feea191c06f2352852f2f10e1f7bc0bb3fc610b",
+    "innosetup": true,
+    "persist": "User",
+    "shortcuts": [
+        [
+            "DreamMail.exe",
+            "DreamMail Pro"
+        ]
+    ],
+    "checkver": {
+        "regex": "dmpro_setup([\\d.]+).exe"
+    },
+    "autoupdate": {
+        "url": "https://download.cy-email.cn/dmpro_setup$version.exe"
+    }
+}

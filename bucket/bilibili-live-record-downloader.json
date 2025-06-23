@@ -1,0 +1,50 @@
+{
+    "version": "3.16.3",
+    "description": "Bilibili live recording and replay downloading software",
+    "homepage": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/3.16.3/BilibiliLiveRecordDownLoader-win-x64-3.16.3.7z",
+            "hash": "1845f7d01a2949a9e496153ce381704efde0578e941e5a0d5f1b7edf394b423a"
+        },
+        "32bit": {
+            "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/3.16.3/BilibiliLiveRecordDownLoader-win-x86-3.16.3.7z",
+            "hash": "3d19e5e1c908347be6db07ed245007a242c14364fffb1009b5e333038d664cf2"
+        },
+        "arm64": {
+            "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/3.16.3/BilibiliLiveRecordDownLoader-win-arm64-3.16.3.7z",
+            "hash": "59a135f2d6b33f89ee9b88895894995da0d02eb9e9440d84bd01f2da2e6b649e"
+        }
+    },
+    "extract_dir": "BilibiliLiveRecordDownLoader",
+    "shortcuts": [
+        [
+            "BilibiliLiveRecordDownLoader.exe",
+            "BilibiliLiveRecordDownLoader"
+        ]
+    ],
+    "pre_install": "if (!(Test-Path \"$persist_dir\\BilibiliLiveRecordDownLoader.json\")) { Set-Content -Encoding ASCII -Path \"$dir\\BilibiliLiveRecordDownLoader.json\" -Value \"{}\" }",
+    "persist": "BilibiliLiveRecordDownLoader.json",
+    "suggest": {
+        "ffmpeg": "ffmpeg"
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/$version/BilibiliLiveRecordDownLoader-win-x64-$version.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/$version/BilibiliLiveRecordDownLoader-win-x86-$version.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/$version/BilibiliLiveRecordDownLoader-win-arm64-$version.7z"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/tag/$version",
+            "regex": "(?sm)$basename(?:<.*?>\\s*)*$sha256"
+        }
+    }
+}

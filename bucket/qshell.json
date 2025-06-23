@@ -1,11 +1,31 @@
 {
     "version": "2.16.1",
-    "description": "Shell Tools for Qiniu Cloud",
-    "homepage": "https://developer.qiniu.com/kodo/1302/qshell",
-    "license": "BSD-3-Clause",
-    "url": "https://github.com/qiniu/qshell/releases/download/v2.16.1/qshell-v2.16.1-windows-amd64.zip",
+    "description": "Shell Tools for Qiniu Cloud.",
+    "homepage": "https://github.com/qiniu/qshell",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/qiniu/qshell/releases/download/v2.16.1/qshell-v2.16.1-windows-amd64.zip",
+            "hash": "md5:c1dc09a682a9e40378048e0a6da3ff41"
+        },
+        "32bit": {
+            "url": "https://github.com/qiniu/qshell/releases/download/v2.16.1/qshell-v2.16.1-windows-386.zip",
+            "hash": "md5:6da42eaa85ebbdb915bc57bb28137f17"
+        }
+    },
     "bin": "qshell.exe",
-    "ext": {
-        "url": "https://github.com/qiniu/qshell"
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/qiniu/qshell/releases/download/v$version/qshell-v$version-windows-amd64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/qiniu/qshell/releases/download/v$version/qshell-v$version-windows-386.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.md5"
+        }
     }
 }
