@@ -91,8 +91,8 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - wangzq/scoop-bucket
 - TheRandomLabs/Scoop-Bucket
 - zhoujin7/tomato
-- cmontage/scoopbucket-third
 - wzv5/ScoopBucket
+- cmontage/scoopbucket-third
 - DoveBoy/Apps
 - charmbracelet/scoop-bucket
 - TheRandomLabs/Scoop-Python
@@ -108,10 +108,10 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - brian6932/dank-scoop
 - kengwang/scoop-ctftools-bucket
 - SayCV/scoop-cvp
-- iquiw/scoop-bucket
 - batkiz/backit
-- Darkatse/Scoop-Darkatse
 - TianXiaTech/scoop-txt
+- iquiw/scoop-bucket
+- Darkatse/Scoop-Darkatse
 - AStupidBear/scoop-bear
 - seumsc/scoop-seu
 - Small-Ku/turbo-bucket
@@ -126,10 +126,10 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - Weidows-projects/scoop-3rd
 - Toddli468/Pentest-Scoop-Bucket
 - rivy/scoop-bucket
-- AkariiinMKII/Scoop4kariiin
+- beer-psi/scoop-bucket
 - littleli/Scoop-littleli
 - WinApps-share/WinApps-bucket
-- beer-psi/scoop-bucket
+- AkariiinMKII/Scoop4kariiin
 - KnotUntied/scoop-fonts
 - ChinLong/scoop-customize
 - yuusakuri/scoop-bucket
