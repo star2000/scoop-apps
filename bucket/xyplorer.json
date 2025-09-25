@@ -1,26 +1,19 @@
 {
-    "version": "27.20.0000",
-    "description": "A fast, powerful, pretty, and easy-to-use file manager for Windows",
+    "version": "28.00.0000",
+    "description": "XYplorer is a file manager for Windows. It features tabbed browsing, a powerful file search, a versatile preview, a highly customizable interface, optional dual pane, and a large array of unique ways to efficiently automate frequently recurring tasks. It’s fast, light, and portable.",
     "homepage": "https://www.xyplorer.com/",
-    "license": {
-        "identifier": "Shareware",
-        "url": "https://www.xyplorer.com/LicenseXY.txt"
-    },
-    "url": "https://www.xyplorer.com/download/xyplorer_full_noinstall.zip",
-    "hash": "bf174ad2fc0af7014ff383aacb0ef8c800df805e9c4cdf0c064d51c253f82008",
-    "bin": "XYplorer.exe",
+    "license": "BSD-3-Clause",
+    "url": "https://xmod-my.sharepoint.cn/:u:/g/personal/admin_xmod_partner_onmschina_cn/EejMt8BESfFKtUBlmBeCNp8BNJ4bA0pnuS6y-LWVeEUl0Q?download=1#/dl.7z",
+    "persist": [
+        "Data"
+    ],
     "shortcuts": [
         [
             "XYplorer.exe",
             "XYplorer"
         ]
     ],
-    "persist": "Data",
-    "checkver": {
-        "url": "https://www.xyplorer.com/version.php",
-        "regex": "([\\d\\.]+)"
-    },
-    "autoupdate": {
+    "ext": {
         "url": "https://www.xyplorer.com/download/xyplorer_full_noinstall.zip"
     }
 }
