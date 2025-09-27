@@ -1,20 +1,19 @@
 {
-    "version": "8.10.0",
+    "version": "8.11.1",
     "description": "Powerful and easy to use e-book manager",
     "homepage": "https://calibre-ebook.com",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kovidgoyal/calibre/releases/download/v8.10.0/calibre-portable-installer-8.10.0.exe",
-            "hash": "sha512:2c6878793eb542f0c2f81386e25e39821c79fdc3329838855aaa278e9013942f135bb2f57d4c494243066efe4279a88c34e5b15898a441a5d04cf345b297da15"
+            "url": "https://download.calibre-ebook.com/8.11.1/calibre-portable-installer-8.11.1.exe",
+            "hash": "sha512:d6f0822590c44f4fadaeac5ec53d11d7c662f285ddae351ab2f7f99fbb5cd00601ceafab32a084f8d6472a8f69e346e1573f7290893466c47226c824b7b875e1"
         }
     },
     "installer": {
         "script": [
-            "Start-Process \"$dir\\calibre-portable-installer-$version.exe\" @(\"$env:TEMP\") -Wait",
-            "Move-Item \"$env:TEMP\\Calibre Portable\\**\" \"$dir\"",
-            "Remove-Item \"$env:TEMP\\Calibre Portable\"",
-            "Icacls $dir /t /c /reset"
+            "Start-Process \"$dir\\calibre-portable-installer-$version.exe\" @(\"$dir\") -Wait",
+            "Move-Item \"$dir\\Calibre Portable\\**\" \"$dir\"",
+            "Remove-Item \"$dir\\Calibre Portable\""
         ]
     },
     "bin": [
@@ -71,7 +70,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/kovidgoyal/calibre/releases/download/v$version/calibre-portable-installer-$version.exe",
+                "url": "https://download.calibre-ebook.com/$version/calibre-portable-installer-$version.exe",
                 "hash": {
                     "url": "https://calibre-ebook.com/signatures/calibre-portable-installer-$version.exe.sha512"
                 }
