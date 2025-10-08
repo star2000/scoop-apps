@@ -91,8 +91,8 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - akirco/aki-apps
 - wangzq/scoop-bucket
 - Qv2ray/mochi
-- TheRandomLabs/Scoop-Bucket
 - cmontage/scoopbucket-third
+- TheRandomLabs/Scoop-Bucket
 - DoveBoy/Apps
 - zhoujin7/tomato
 - wzv5/ScoopBucket
@@ -100,8 +100,8 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - TheRandomLabs/Scoop-Python
 - charmbracelet/scoop-bucket
 - jonz94/scoop-sarasa-nerd-fonts
-- naderi/scoop-bucket
 - hu3rror/scoop-muggle
+- naderi/scoop-bucket
 - NyaMisty/scoop_bucket_misty
 - noql-net/scoop
 - abgox/abgo_bucket
@@ -114,8 +114,8 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - SayCV/scoop-cvp
 - iquiw/scoop-bucket
 - Small-Ku/turbo-bucket
-- Darkatse/Scoop-Darkatse
 - TianXiaTech/scoop-txt
+- Darkatse/Scoop-Darkatse
 - 42wim/scoop-bucket
 - AStupidBear/scoop-bear
 - seumsc/scoop-seu
@@ -132,9 +132,9 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - AkariiinMKII/Scoop4kariiin
 - rivy/scoop-bucket
 - Toddli468/Pentest-Scoop-Bucket
-- beer-psi/scoop-bucket
 - HUMORCE/nuke
 - littleli/Scoop-littleli
+- beer-psi/scoop-bucket
 - Darkatse/Scoop-KanColle
 - typst-community/scoop-bucket
 - Deide/deide-bucket
