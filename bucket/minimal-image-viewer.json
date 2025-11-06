@@ -1,12 +1,12 @@
 {
-    "version": "1.5",
+    "version": "1.5.2",
     "description": "Minimal Image Viewer is a fast, secure, and minimalist C++ image viewer for Windows.",
     "homepage": "https://github.com/deminimis/minimalimageviewer",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/deminimis/minimalimageviewer/releases/download/v1.5/Minimal.Image.Viewer.exe#/MinimalImageViewer.exe",
-            "hash": "4b2c1cd2c7b75f589af79d68d696e7db69a479ea509ad870219e0bfa8988bb60"
+            "url": "https://github.com/deminimis/minimalimageviewer/releases/download/v1.5.2/Minimal.Image.Viewer.exe#/MinimalImageViewer.exe",
+            "hash": "792ae76d1d58719b57f6094501a13bcfdbbfebc1aeac8ab670de4fa4c3d41bbd"
         }
     },
     "bin": "MinimalImageViewer.exe",
