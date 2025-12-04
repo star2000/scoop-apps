@@ -90,8 +90,8 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - akirco/aki-apps
 - kiennq/scoop-misc
 - wangzq/scoop-bucket
-- everyx/scoop-bucket
 - cmontage/scoopbucket-third
+- everyx/scoop-bucket
 - TheRandomLabs/Scoop-Bucket
 - Qv2ray/mochi
 - DoveBoy/Apps
@@ -102,8 +102,8 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - TheRandomLabs/Scoop-Python
 - jonz94/scoop-sarasa-nerd-fonts
 - hu3rror/scoop-muggle
-- naderi/scoop-bucket
 - NyaMisty/scoop_bucket_misty
+- naderi/scoop-bucket
 - noql-net/scoop
 - abgox/abgo_bucket
 - kengwang/scoop-ctftools-bucket
@@ -118,10 +118,10 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - SayCV/scoop-cvp
 - seumsc/scoop-seu
 - Small-Ku/turbo-bucket
+- Darkatse/Scoop-Darkatse
 - TianXiaTech/scoop-txt
 - WinApps-share/WinApps-bucket
 - Weidows-projects/scoop-3rd
-- Darkatse/Scoop-Darkatse
 - iquiw/scoop-bucket
 - starise/Scoop-Confetti
 - 42wim/scoop-bucket
@@ -129,8 +129,8 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - aoisummer/scoop-bucket
 - babo4d/scoop-xrtools
 - jfut/scoop-jfut
-- starise/Scoop-Gaming
 - cc713/ownscoop
+- starise/Scoop-Gaming
 - mo-san/scoop-bucket
 - AkariiinMKII/Scoop4kariiin
 - rivy/scoop-bucket
@@ -151,8 +151,8 @@ scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 - AntonOks/scoop-aoks
 - ShuguangSun/sgs-scoop-bucket
 - maboloshi/scoop-private
-- Rinkerbel/scooped
 - windedge/ladle-bucket
+- Rinkerbel/scooped
 - The-Simples/scoop-minecraft
 - younger-1/scoop-it
 - p8rdev/scoop-portableapps
