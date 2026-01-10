@@ -1,0 +1,31 @@
+{
+    "version": "0.16.1",
+    "description": "Terminal client for .http/.rest files with HTTP, GraphQL and gRPC support, workflows, profiling and response diffs",
+    "homepage": "https://github.com/unkn0wn-root/resterm",
+    "license": " Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/unkn0wn-root/resterm/releases/download/v0.16.1/resterm_Windows_x86_64.exe#/resterm.exe",
+            "hash": "b44959c28e81dd933c0a523cc06c1bc45bd251008b3e3368b43cf33d53b6b073"
+        },
+        "arm64": {
+            "url": "https://github.com/unkn0wn-root/resterm/releases/download/v0.16.1/resterm_Windows_arm64.exe#/resterm.exe",
+            "hash": "79984bf92d4b558357954bf38ea2e7fc216007fd23bb383183d944c598d7689a"
+        }
+    },
+    "bin": "resterm.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/unkn0wn-root/resterm/releases/download/v$version/resterm_Windows_x86_64.exe#/resterm.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/unkn0wn-root/resterm/releases/download/v$version/resterm_Windows_arm64.exe#/resterm.exe"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
