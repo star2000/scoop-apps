@@ -1,0 +1,33 @@
+{
+    "##": "Prefer CI Build. See https://github.com/ki-editor/ki-editor/blob/18d8ce7bd674ad28c324dc636044de4b895d22e2/docs/docs/installation.md#latest-build",
+    "version": "20260123-0405-1e00d6f",
+    "description": "Multi-cursor structural editor.",
+    "homepage": "https://ki-editor.github.io/ki-editor/",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ki-editor/ki-editor/releases/download/latest/ki-windows-x64.exe#/ki.exe",
+            "hash": "79b09b676dd0928d0367c3270698e281f5d09c2066043ffea616dbac37418563"
+        },
+        "arm64": {
+            "url": "https://github.com/ki-editor/ki-editor/releases/download/latest/ki-windows-arm64.exe#/ki.exe",
+            "hash": "803d6699aaa1f85fd1e21808fd95cd0692c6246b18e669e40c8e121b5cc5c2f5"
+        }
+    },
+    "bin": "ki.exe",
+    "checkver": {
+        "url": "https://github.com/ki-editor/ki-editor/releases/tag/latest",
+        "regex": "(?sm)(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):\\d{2}Z.*/ki-editor/commit/(?<commit>[\\da-f]{7})",
+        "replace": "${year}${month}${day}-${hour}${minute}-${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ki-editor/ki-editor/releases/download/latest/ki-windows-x64.exe#/ki.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/ki-editor/ki-editor/releases/download/latest/ki-windows-arm64.exe#/ki.exe"
+            }
+        }
+    }
+}
