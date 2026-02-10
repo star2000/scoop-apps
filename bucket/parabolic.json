@@ -1,38 +1,39 @@
 {
-    "version": "2025.11.1",
-    "description": "A basic yt-dlp frontend.",
+    "version": "2026.2.2",
+    "description": "A powerful yt-dlp frontend.",
     "homepage": "https://github.com/NickvisionApps/Parabolic",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/NickvisionApps/Parabolic/releases/download/2025.11.1/NickvisionParabolicPortable.zip",
-            "hash": "1e02a0913f86e775110d6848d0f9c4befe67f3c6007744d170416677ceadd0bb"
+            "url": "https://github.com/NickvisionApps/Parabolic/releases/download/2026.2.2/NickvisionParabolicSetup.exe",
+            "hash": "605287521f99734a924ce4fc7f25a2e8e10d2c17942d9685671bc62b4b8ce9d8"
+        },
+        "arm64": {
+            "url": "https://github.com/NickvisionApps/Parabolic/releases/download/2026.2.2/NickvisionParabolicSetup-arm64.exe",
+            "hash": "e3257eec1eb11e41933c14fdbdbb709abb2b313d83d04c08fb5f08c0186f1981"
         }
     },
+    "innosetup": true,
+    "extract_dir": "Release",
     "shortcuts": [
         [
-            "org.nickvision.tubeconverter.winui.exe",
+            "Nickvision.Parabolic.WinUI.exe",
             "Parabolic"
         ]
     ],
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\config.json\")) { Set-Content -Encoding ASCII -Path \"$dir\\config.json\" -Value '{}' }",
-        "if (!(Test-Path \"$persist_dir\\prev.json\")) { Set-Content -Encoding ASCII -Path \"$dir\\prev.json\" -Value '{}' }",
-        "if (!(Test-Path \"$persist_dir\\history.json\")) { Set-Content -Encoding ASCII -Path \"$dir\\history.json\" -Value '{}' }",
-        "if (!(Test-Path \"$persist_dir\\recovery.json\")) { Set-Content -Encoding ASCII -Path \"$dir\\recovery.json\" -Value '{}' }"
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\Nickvision Parabolic\" -Force -Recurse -ErrorAction SilentlyContinue }",
+    "notes": [
+        "Parabolic is NOT portable.",
+        "Settings are stored in '%APPDATA%\\Nickvision Parabolic', and can be purged using 'scoop uninstall --purge parabolic'."
     ],
-    "persist": [
-        "config.json",
-        "prev.json",
-        "history.json",
-        "recovery.json"
-    ],
-    "notes": "If Parabolic fails to start properly, please run $dir\\windowsappruntimeinstall.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/NickvisionApps/Parabolic/releases/download/$version/NickvisionParabolicPortable.zip"
+                "url": "https://github.com/NickvisionApps/Parabolic/releases/download/$version/NickvisionParabolicSetup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/NickvisionApps/Parabolic/releases/download/$version/NickvisionParabolicSetup-arm64.exe"
             }
         }
     }
