@@ -1,0 +1,41 @@
+{
+    "version": "b3642",
+    "description": "(Nightly Build) A customisable music player.",
+    "homepage": "https://github.com/fooyin/fooyin",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/fooyin/fooyin/actions/runs/23079403077/windows-amd64.zip",
+            "hash": "09ea5fe915e07d9d003661552d968d1b0fc615afaebfcdc934129f777e6664ee"
+        }
+    },
+    "pre_install": [
+        "Remove-Item \"$dir\\fooyin-*.exe\" -ErrorAction SilentlyContinue",
+        "$zipfile = Get-ChildItem \"$dir\" 'fooyin-*.zip' | Select-Object -First 1",
+        "if (!$zipfile) { error 'Failed to find portable package file.' ; exit }",
+        "Expand-7zipArchive -Path $zipfile.FullName -Destination \"$dir\" -Removal -ExtractDir $zipfile.BaseName"
+    ],
+    "shortcuts": [
+        [
+            "fooyin.exe",
+            "fooyin"
+        ]
+    ],
+    "persist": [
+        "data",
+        "config",
+        "cache"
+    ],
+    "checkver": {
+        "url": "https://github.com/fooyin/fooyin/actions/workflows/build.yml?query=event%3Apush+is%3Asuccess+branch%3Amaster",
+        "regex": "(?sm)/actions/runs/(?<run>\\d+)\".*?#(?<build>\\d+):",
+        "replace": "b${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/fooyin/fooyin/actions/runs/$matchRun/windows-amd64.zip"
+            }
+        }
+    }
+}
